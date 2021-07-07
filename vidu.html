@@ -1,0 +1,335 @@
+<html>
+    <head>
+        <script language="JavaScript" src="vidu.js"></script>
+        <link href="vidu.css" rel="stylesheet">
+        <title>JavaScript</title>
+    </head>
+
+    <body onload="load()">
+        <h1>Phần 1. JavaScript căn bản</h1>
+
+        <hr>
+
+        <div>
+            <h2>Tính tổng</h2>
+            <form>
+                <p>Nhập số a: <input type="number" id="so_a"></p>
+                <p>Nhập số b: <input type="number" id="so_b"></p>
+                <p><input type="button" value="Tính tổng" onclick="sum()"></p>
+                <p><span>Kết quả: </span><span id="kq"></span></span></p>
+            </form>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Hiển thị ngày tháng</h2>
+            <p id="date">Today is: </p>
+            <p><input type="button" value="Update date" onclick="displayDate()"></p>
+        </div>
+
+        <hr>
+
+        <div id="maunen">
+            <h2>Thay đổi màu nền</h2>
+            <p><input type="checkbox" id="chkbpage"><label for="chkbpage">Cả trang</label></p>
+            <p>
+                <input type="button" value="Màu nền lightgrey" onclick="bgcolor_setlightgrey()">
+                <input type="button" value="Màu nền coral" onclick="bgcolor_setcoral()">
+                <input type="button" value="Về mặc định" onclick="bgcolor_setdefault()">
+            </p>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Kiểm tra chẵn lẻ</h2>
+            <form>
+                <p>Nhập số n: <input type="number" id="so_n"></p>
+                <p><input type="button" value="Kiểm tra" onclick="is_oddeven()"></p>
+                <p><span>n là số </span><span id="kq_cl"></span></span></p>
+            </form>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Nhập và hiển thị thông tin</h2>
+            <div id="form_kh">
+                <h3>Hồ sơ đăng ký</h3>
+                <p>Trạng thái: <span id="status">Ổn định</span></p>
+                <table class="purple-border">
+                    <tr>
+                        <th class="purple-border">Thông tin đăng nhập</th>
+                        <th class="purple-border">Hồ sơ khách hàng</th>
+                    </tr>
+
+                    <tr>
+                        <td class="purple-border">
+                            <table>
+                                <tr>
+                                    <td>Tên đăng nhập</td>
+                                    <td><input type="text" id="ten_dn"></td>
+                                </tr>
+                                <tr>
+                                    <td>Mật khẩu</td>
+                                    <td><input type="password" id="mk_dn"></td>
+                                </tr>
+                                <tr>
+                                    <td>Nhập lại mật khẩu</td>
+                                    <td><input type="password" id="mknl_dn"></td>
+                                </tr>
+                            </table>
+                        </td> 
+                        <td rowspan="3" class="purple-border" style="padding-right: 20px">
+                            <ul>
+                                <li>Họ tên khách hàng: <span id="txt_hoten_kh"></span></li>
+                                <li>Tên đăng nhập: <span id="txt_ten_dn"></span></li>
+                                <li>Mật khẩu: <span id="txt_mk_dn"></span></li>
+                                <li>Ngày sinh: <span id="txt_ngaysinh_kh"></span></li>
+                                <li>Giới tính: <span id="txt_gioitinh_kh"></span></li>
+                                <li>Email: <span id="txt_email_kh"></span></li>
+                                <li>Địa chỉ: <span id="txt_diachi_kh"></span></li>
+                                <li>Điện thoại: <span id="txt_sdt_kh"></span></li>
+                            </ul>
+                        </td>                     
+                    </tr>
+
+                    <tr>
+                        <th class="purple-border">Thông tin cá nhân</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Họ tên khách hàng</td>
+                                    <td><input type="text" id="hoten_kh"></td>
+                                </tr>
+                                <tr>
+                                    <td>Ngày sinh</td>
+                                    <td>
+                                        <select id="sel_day">
+                                            <option disabled selected>Date</option>>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>21</option>
+                                            <option>22</option>
+                                            <option>23</option>
+                                            <option>24</option>
+                                            <option>25</option>
+                                            <option>26</option>
+                                            <option>27</option>
+                                            <option>28</option>
+                                            <option>29</option>
+                                            <option>30</option>
+                                            <option>31</option>
+                                        </select>
+                                        <span> / </span>
+                                        <select id="sel_month">
+                                            <option disabled selected>Month</option>>
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                        <span> / </span>
+                                        <select id="sel_year">
+                                            <option disabled selected>Year</option>>
+                                            <option>2001</option>
+                                            <option>2002</option>
+                                            <option>2003</option>
+                                            <option>2004</option>
+                                            <option>2005</option>
+                                            <option>2006</option>
+                                            <option>2007</option>
+                                            <option>2008</option>
+                                            <option>2009</option>
+                                            <option>2010</option>
+                                            <option>2011</option>
+                                            <option>2012</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><input type="email" id="email_kh"></td>
+                                </tr>
+                                <tr>
+                                    <td>Giới tính</td>
+                                    <td>
+                                        <input type="radio" id="gend_male" name="gender" checked="true"><label for="gend_male">Nam</label>
+                                        <input type="radio" id="gend_female" name="gender"><label for="gend_female">Nữ</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Địa chỉ</td>
+                                    <td>
+                                        <textarea id="diachi_kh">
+
+                                        </textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Điện thoại</td>
+                                    <td><input type="number" id="sdt_kh"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><button id="btnDK" onclick="dangky()">Đăng ký</button></td>
+                                </tr>
+                            </table>
+                        </t>                      
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+        
+        <div>
+            <h2>Tính nhiều phép</h2>
+            <form>
+                <p>Nhập x: <input type="number" id="so_x"></p>
+                <p>Nhập y: <input type="number" id="so_y"></p>
+                <p>Kết quả: <input type="number" id="so_ketqua"></p>
+                <p>Phép tính: 
+                    <input type="button" value="+" onclick="tinhtong()">
+                    <input type="button" value="-" onclick="tinhhieu()">
+                    <input type="button" value="*" onclick="tinhtich()">
+                    <input type="button" value="/" onclick="tinhchialaynguyen()">
+                    <input type="button" value="%" onclick="tinhchialaydu()">
+                </p>
+                <p><span>Bạn vừa chọn tính </span><span id="pheptinhchon"></span></span></p>
+            </form>
+        </div>
+
+        <hr>        
+        <hr>
+        
+        <h1>Phần 2. Sự kiện trong JavaScript</h1>
+
+        <hr>
+
+        <div>
+            <h2>Sự kiện OnClick</h2>
+            <form>
+                <h3>Nhập ngày sinh:</h3>
+                <p><input type="date" id="dateofb"></p>
+                <p><input type="button" value="Tính tuổi" onclick="tinhtuoi()"></p>
+            </form>
+        </div>
+
+        <hr>        
+
+        <div>
+            <h2>Sự kiện onFocus và onBlur</h2>
+            
+            <form>
+                <p>Nhập tên: <input type="text" id="txtboxten" onfocus="onfocus_txtboxten()" onblur="onblur_txtboxten()"></p>
+            </form>
+        </div>
+
+        <hr>        
+
+        <div>
+            <h2>Sử dụng sự kiện onBlur() để kiểm tra kiểu dữ liệu nhập vào là kiểu số hay không?</h2>
+            
+            <form>
+                <p>Nhập số: <input type="text" id="txtso" onblur="onblur_ktrcophailaso()"></p>
+            </form>
+        </div>
+
+        <hr>
+        <hr>
+
+        <h1>Phần 3. Kiểm tra tính hợp lệ dữ liệu</h1>
+
+        <hr>
+
+        <div>
+            <h2>Kiểm tra tên</h2>
+            <form>
+                <p>
+                    Nhập họ tên: 
+                    <input type="text" id="txttenkiemtra">
+                    <input type="button" value="Kiểm tra" onclick="ktrten()">
+                </p>
+            </form>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Kiểm tra số</h2>
+            <form>
+                <p>Hãy nhập vào 1 số có giá trị từ 0 đến 10</p>
+                <p>
+                    <input type="text" id="txtsokiemtra">
+                    <input type="button" value="Kiểm tra dữ liệu" onclick="ktrso()">
+                </p>
+            </form>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Kiểm tra số điện thoại</h2>
+            <form>
+                <p>Số điện thoại có độ dài 10 hoặc 11 chữ số</p>
+                <p>
+                    <input type="text" id="txtsdtkiemtra">
+                    <input type="button" value="Kiểm tra dữ liệu" onclick="ktrsdt()">
+                </p>
+            </form>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Kiểm tra địa chỉ email</h2>
+            <form>
+                <p>
+                    <input type="text" id="emailktr">
+                    <input type="button" value="Kiểm tra email" onclick="checkEmail()">
+                </p>
+                <p id="kqktremail">Hãy nhập địa chỉ email hợp lệ. Ví dụ: huongnl.bvu@gmail.com</p>
+            </form>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Tự động cập nhập thời gian</h2>
+            <form>
+                <p>Hiện tại: <span id="curtime"></span></p>
+            </form>
+        </div>
+    </body>
+</html>
