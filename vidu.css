@@ -1,0 +1,43 @@
+#form_kh{
+    margin: 0px 0px;
+    max-width: fit-content;
+}
+
+#form_kh table, #form_kh th{
+    padding: 5px 20px;
+    color: #470288;
+}
+
+#form_kh h3{
+    text-align: center;
+    color: #9a2521;
+}
+
+#form_kh span{
+    font-style: italic;
+}
+
+#form_kh p{
+    text-align: center;
+    font-style: italic;
+    color: #9a2521;
+}
+
+#form_kh td{
+    padding: 5px 5px;
+}
+
+#form_kh th{
+    background-color: #ffe3ff;
+}
+
+
+.purple-border{
+    border-collapse: collapse;
+    border: 1px solid #470288;
+}
+
+#txtboxten{
+    background-color: azure;
+    outline: none;
+}
